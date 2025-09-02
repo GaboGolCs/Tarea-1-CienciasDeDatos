@@ -1,43 +1,12 @@
-estudiantes = [
-    {"nombre": "Ana", "notas": [6.5, 7.0, 5.8]},
-    {"nombre": "Luis", "notas": [7.0, 6.5, 6.0]},
-    {"nombre": "María", "notas": [5.5, 6.0, 6.8]},
-    {"nombre": "Carlos", "notas": [4.0, 5.5, 6.0]},
-    {"nombre": "Elena", "notas": [3.2, 6.5, 4.0]},
-    {"nombre": "Pedro", "notas": [7.0, 6.5, 5.2]},
-    {"nombre": "Lucía", "notas": [5.5, 1.0, 6.8]},
-    {"nombre": "Jorge", "notas": [6.0, 5.8, 6.2]},
-    {"nombre": "Sofía", "notas": [6.5, 4.0, 7.0]},
-    {"nombre": "Miguel", "notas": [5.0, 5.5, 6.0]},
-    {"nombre": "Raquel", "notas": [6.8, 7.0, 7.0]},
-    {"nombre": "Daniel", "notas": [4.5, 6.0, 7.0]},
-    {"nombre": "Laura", "notas": [7.0, 6.0, 6.5]},
-    {"nombre": "Fernando", "notas": [6.0, 6.0, 6.0]},
-    {"nombre": "Claudia", "notas": [4.0, 4.5, 3.5]},
-    {"nombre": "Iván", "notas": [5.5, 6.2, 6.0]},
-    {"nombre": "Patricia", "notas": [2.0, 7.0, 7.0]},
-    {"nombre": "Andrés", "notas": [4.5, 5.0, 5.5]},
-    {"nombre": "Isabel", "notas": [6.2, 6.5, 7.0]},
-    {"nombre": "Rubén", "notas": [6.5, 6.8, 6.7]},
-    {"nombre": "Carmen", "notas": [6.8, 5.0, 4.5]},
-    {"nombre": "Óscar", "notas": [5.0, 5.2, 3.5]},
-    {"nombre": "Natalia", "notas": [6.8, 3.2, 5.0]},
-    {"nombre": "Hugo", "notas": [6.0, 6.3, 6.1]},
-    {"nombre": "Marta", "notas": [6.0, 4.5, 6.2]},
-    {"nombre": "Adrián", "notas": [4.8, 5.5, 5.0]},
-    {"nombre": "Beatriz", "notas": [4.5, 7.0, 5.8]},
-    {"nombre": "Sergio", "notas": [6.2, 6.4, 6.6]},
-    {"nombre": "Inés", "notas": [6.5, 5.8, 4.9]},
-    {"nombre": "Tomás", "notas": [5.5, 2.0, 5.8]}
-]
+from datosEstudiantes import estudiantes    
 
-aux = 0
+contador = 0
 for estudiante in estudiantes:
     for nota in estudiante["notas"]:
         if nota < 4.0:
-            aux += 1
+            contador += 1
             break
 
 total_estudiantes = len(estudiantes)
-porcentaje = (aux / total_estudiantes) * 100
+porcentaje = (contador / total_estudiantes) * 100
 print(f"Porcentaje de estudiantes con al menos una nota menor a 4.0: {porcentaje:.2f}%")
